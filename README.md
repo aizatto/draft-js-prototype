@@ -13,6 +13,8 @@ Experiment at https://aizatto.github.io/draft-js-prototype/
 
 # Mobile Support
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/aizatto/draft-js-prototype.svg)](https://greenkeeper.io/)
+
 > Draft.js is moving towards full mobile support, but does not officially support mobile browsers at this point. There are some known issues affecting Android and iOS - see issues tagged 'android' or 'ios' for the current status.
 
 https://draftjs.org/docs/advanced-topics-issues-and-pitfalls.html#mobile-not-yet-supported
