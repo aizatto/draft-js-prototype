@@ -29,3 +29,30 @@ Mac:
 - Header 2: Command + Option + 2
 - Header 3: Command + Option + 3
 - Link: Command + K
+
+# Issues
+
+## draft-js-markdown-plugin@3.0.5 does not work with draft-js@0.11.4
+
+- Original: draft-js-plugins-editor@3.0.0 and draft-js0.11.4
+  - doesn't work
+  - draft-jsplugins-editor is typed
+  - Issue in `draft-js-markdown-plugin/lib/index.js`
+  - Error:
+    - setEditorState is not a function
+    - at Object.handleBeforeInput (index.js:410)
+- Test 1: draft-js-plugins-editor@2.1.1 and draft-js0.11.4
+  - doesn't work
+  - draft-js-plugins-editor isn't typed
+  - Issue in `draft-js-markdown-plugin/lib/index.js`
+  - Error:
+    - setEditorState is not a function
+    - at Object.handleBeforeInput (index.js:410)
+- Test 2: draft-js-plugins-editor@3.0.0 and draft-js0.10.5
+  - Issue in `draft-js-plugins-editor/lib/Editor/defaultKeyCommands.js`
+  - Error:
+    - Uncaught TypeError: Cannot read property 'setEditorState' of undefined
+    - at Object.handleKeyCommand (defaultKeyCommands.js:12)
+- Test 3: draft-js-plugins-editor@2.1.1 and draft-js0.10.5
+  - works
+  - draft-js-plugins-editor isn't typed

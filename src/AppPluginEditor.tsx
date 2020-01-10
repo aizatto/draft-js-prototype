@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Container, Button } from "reactstrap";
 
+// @ts-ignore
 import Editor from "draft-js-plugins-editor";
 // @ts-ignore
 import createMarkdownPlugin from "draft-js-markdown-plugin";
@@ -24,7 +25,7 @@ function AppEditor(): JSX.Element {
       <div style={{ border: "1px solid #000" }}>
         <Editor
           editorState={editorState}
-          onChange={editorState => {
+          onChange={(editorState: EditorState) => {
             // console.log(editorState.getCurrentContent());
             setEditorState(editorState);
             const newMarkdown = stateToMarkdown(
@@ -35,7 +36,7 @@ function AppEditor(): JSX.Element {
           plugins={plugins}
         />
       </div>
-      <textarea value={markdown} />
+      <textarea value={markdown} readOnly />
     </div>
   );
 }
